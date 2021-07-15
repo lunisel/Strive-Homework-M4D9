@@ -40,9 +40,12 @@ const Registration = (props) => {
         <Row>
           <Col xs={1} md={2}></Col>
           <Col xs={10} md={8} className="d-flex flex-column align-items-center">
-            <h1 className="text-center">Registration Form</h1>
-            <Form className="w-75" onSubmit={submitRegistration}>
-              <Form.Group>
+            <h1 className="text-center mt-4">Registration Form</h1>
+            <Form
+              className="w-75 d-flex flex-column align-items-center"
+              onSubmit={submitRegistration}
+            >
+              <Form.Group className="w-100">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
                   type="text"
@@ -53,7 +56,7 @@ const Registration = (props) => {
                   }}
                 />
               </Form.Group>
-              <Form.Group>
+              <Form.Group className="w-100">
                 <Form.Label>Surname</Form.Label>
                 <Form.Control
                   type="text"
@@ -64,7 +67,7 @@ const Registration = (props) => {
                   }}
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="w-100" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
                   type="email"
@@ -74,11 +77,8 @@ const Registration = (props) => {
                     handleInput("email", e.target.value);
                   }}
                 />
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-                </Form.Text>
               </Form.Group>
-              <Form.Group>
+              <Form.Group className="w-100">
                 <Form.Label htmlFor="inputPassword5">Password</Form.Label>
                 <Form.Control
                   type="password"
@@ -98,6 +98,7 @@ const Registration = (props) => {
               </Form.Group>
               <Button
                 type="submit"
+                className="w-50 mt-3"
                 disabled={
                   (!form.name, !form.surname, !form.email, !form.password)
                 }

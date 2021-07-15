@@ -35,7 +35,15 @@ const NavBar = (props) => (
                 <i class="bi bi-heart"></i>
               </div>
               <Link to="/registration" className="sign-up">
-                <div className="nav-link">Sign-up</div>
+                <div
+                  className={
+                    props.location.pathname === "/registration"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  Sign-up
+                </div>
               </Link>
               <div className="nav-link">EN</div>
             </Nav>
