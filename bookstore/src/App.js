@@ -6,6 +6,8 @@ import Home from "./Components/Home";
 import Search from "./Components/Search";
 import Registration from "./Components/Registration";
 import Comments from "./Components/Comments";
+import Categories from "./Components/Categories";
+import Category from "./Components/Category";
 
 function App() {
   return (
@@ -32,6 +34,12 @@ function App() {
           exact
           render={(routerProps) => <Comments {...routerProps} />}
         />
+        <Route
+          path="/categories"
+          exact
+          render={(routerProps) => <Categories {...routerProps} />}
+        />
+        <Route path="/category/:name" component={Category} />
       </Router>
     </div>
   );

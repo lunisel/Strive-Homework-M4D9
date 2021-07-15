@@ -115,7 +115,9 @@ const Registration = (props) => {
           passOk === false ? "d-none" : "d-flex flex-column align-items-center"
         }
       >
+        <hr />
         <h1>Your account</h1>
+        <hr />
         <p>Your name: {form.name} </p>
         <p>Your surname: {form.surname}</p>
         <p>Your email: {form.email}</p>
