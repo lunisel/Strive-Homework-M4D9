@@ -64,12 +64,9 @@ const BookList = (props) => {
                 <div className="nav-link">
                   <i class="bi bi-heart"></i>
                 </div>
-                <div className="nav-link">
-                  <img
-                    src="https://180dc.org/wp-content/uploads/2017/11/profile-placeholder.png"
-                    className="img-fluid rounded-circle"
-                  />
-                </div>
+                <Link to="/registration" className="sign-up">
+                  <div className="nav-link">Sign-up</div>
+                </Link>
                 <div className="nav-link">EN</div>
               </Nav>
             </Col>

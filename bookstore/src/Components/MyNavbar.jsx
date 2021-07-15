@@ -12,15 +12,20 @@ const NavBar = (props) => (
           <Col xs={10} md={3}>
             <Navbar.Brand>BOOKSTORE</Navbar.Brand>
           </Col>
-          <Col xs={1} md={6}>
-            <Form.Group className="d-flex align-items-baseline">
+          <Col
+            xs={1}
+            md={6}
+            className={props.location.pathname === "/comments" ? "bg-blue" : ""}
+          >
+            <Form.Group
+              className={
+                props.location.pathname === "/comments"
+                  ? "opacity-0"
+                  : "d-flex align-items-baseline"
+              }
+            >
               <Link to="/search" className="w-100">
-                <Form.Control
-                  type="text"
-                  placeholder="Search here"
-                  /* value={searchQuery} */
-                  /* onChange={(e) => setSearchQuery(e.target.value)} */
-                />
+                <Form.Control type="text" placeholder="Search here" />
               </Link>
             </Form.Group>
           </Col>
@@ -29,12 +34,9 @@ const NavBar = (props) => (
               <div className="nav-link">
                 <i class="bi bi-heart"></i>
               </div>
-              <div className="nav-link">
-                <img
-                  src="https://180dc.org/wp-content/uploads/2017/11/profile-placeholder.png"
-                  className="img-fluid rounded-circle"
-                />
-              </div>
+              <Link to="/registration" className="sign-up">
+                <div className="nav-link">Sign-up</div>
+              </Link>
               <div className="nav-link">EN</div>
             </Nav>
           </Col>

@@ -216,3 +216,23 @@ span.badge {
 div.col-lg-2.col-md-4.col-12 {
   padding: 0 0.3rem;
 }
+
+/* NAVBAR */
+
+a.sign-up {
+  text-decoration: none;
+}
+
+a.sign-up.active {
+  text-decoration: underline;
+}
+
+.opacity-0 {
+  display: none;
+}
+
+.bg-blue {
+  background-color: #33495b;
+  margin-left: 1.5rem;
+  width: 45% !important;
+}

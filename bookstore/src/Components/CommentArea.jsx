@@ -56,7 +56,7 @@ const CommentArea = (prop) => {
   }, [prop.b.asin]);
 
   return (
-    <div>
+    <div className="d-flex flex-column align-items-center">
       {state.isLoading && <Loading />}
       {state.isError && <Error />}
       <img src={prop.b.img} style={{ width: "10rem" }} alt="book-cover" />
